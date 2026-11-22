@@ -2,16 +2,27 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Mój Przepiśnik</title>
     <link rel="manifest" href="manifest.json">
     <link rel="apple-touch-icon" href="ikona.png">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-title" content="Przepiśnik">   
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Przepiśnik">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    Tutaj będzie przykładowy przepis
+    <!-- Stały górny pasek z Twojego szkicu -->
+    <header class="top-bar">
+        <button id="btn-home" class="nav-btn" aria-label="Strona główna">⌂</button>
+        <input type="search" id="search-input" class="search-pill" placeholder="Szukaj przepisu...">
+        <button id="btn-back" class="nav-btn" aria-label="Cofnij">←</button>
+    </header>
 
+    <!-- Tutaj JS będzie wstawiał: kategorie, listę przepisów lub konkretny przepis -->
+    <main id="app-content" class="container"></main>
+
+    <script src="app.js"></script>
 </body>
 </html>
