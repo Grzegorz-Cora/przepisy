@@ -1,109 +1,40 @@
-* {
+*{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-body {
-    background-color: #fff0f5; /* Delikatny cukierkowy róż */
-    color: #4a2c3a;
-    /* Odstęp na górze pod zegar iPhone'a */
-    padding-top: env(safe-area-inset-top);
-}
-
-/* Górny pasek: Domek - Szukajka - Strzałka */
-.top-bar {
-    position: sticky;
-    top: 0;
+header{
     display: flex;
     align-items: center;
     gap: 10px;
-    padding: 12px 16px;
-    background-color: #ffb6c1;
-    box-shadow: 0 4px 10px rgba(255, 105, 180, 0.2);
+    position: sticky;
+    top: 0;
     z-index: 10;
+    padding: calc(10px + env(safe-area-inset-top)) 14px 10px 14px;
+    background-color: rgb(255, 161, 239);
 }
 
-.nav-btn {
-    width: 44px;
-    height: 44px;
-    border: none;
-    border-radius: 14px;
-    background-color: #ffffff;
-    color: #ff4d88;
-    font-size: 22px;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: 0 3px 0 #ff85ad;
-    flex-shrink: 0;
-}
-
-.nav-btn:active {
-    transform: translateY(2px);
-    box-shadow: 0 1px 0 #ff85ad;
-}
-
-.search-pill {
+.search-style{
     flex: 1;
+    min-width: 0;
     height: 44px;
-    padding: 0 18px;
-    border: 2px solid #ff85ad;
-    border-radius: 999px; /* Owalny kształt z rysunku */
-    background-color: #ffffff;
-    font-size: 16px; /* 16px zapobiega automatycznemu przybliżaniu ekranu na iOS */
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 0 14px;
+    border: 4px solid rgb(201, 151, 193);
     outline: none;
 }
 
-/* Kontener na prostokątne kafle */
-.container {
-    padding: 20px 16px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-
-/* Prostokąty kategorii i przepisów */
-.card {
-    background-color: #ffffff;
-    border: 3px solid #ffc2d4;
-    border-radius: 20px;
-    padding: 22px 20px;
-    font-size: 20px;
-    font-weight: 700;
-    color: #d6336c;
-    text-align: center;
-    cursor: pointer;
-    box-shadow: 0 5px 0 #ffc2d4;
-    transition: transform 0.1s;
-}
-
-.card:active {
-    transform: translateY(3px);
-    box-shadow: 0 2px 0 #ffc2d4;
-}
-
-/* Widok pojedynczego przepisu */
-.recipe-box {
-    background-color: #ffffff;
-    border-radius: 22px;
-    padding: 22px;
-    border: 3px solid #ffc2d4;
-    line-height: 1.6;
-}
-
-.recipe-box h1 {
-    color: #d6336c;
-    margin-bottom: 14px;
+.nav-btn{
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
     font-size: 24px;
-}
-
-.recipe-box h2 {
-    color: #ff4d88;
-    margin: 16px 0 8px;
-    font-size: 18px;
-}
-
-.recipe-box ul {
-    padding-left: 20px;
+    border: 4px solid rgb(201, 151, 193);
+    outline: none;
+    color: rgb(201, 151, 193);      
+    background-color: white;
+    font-weight: 2000;
 }
